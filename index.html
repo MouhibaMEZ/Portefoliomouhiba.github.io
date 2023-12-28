@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Portfolio</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 1000;
+            padding: 100;
+            background-color: #f3f0f0;
+        }
+
+        header {
+            background-color: #a10c0c;
+            padding: 1em;
+            text-align: center;
+            color: white;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 0.5em;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0.5em 1em;
+            margin: 0 0.2em;
+            display: inline-block;
+        }
+
+        section {
+            padding: 2em;
+            background-color: rgb(245, 244, 244);
+            margin: 1em;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mein Portfolio</h1>
+        <audio controls>
+            <source src="//www.youtube.com/watch?v=V6gjzNm6dA0" type="audio/mpeg">
+                Please Check the audio Extension
+        </audio>
+        <img src="data:image/png;base64,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" alt="A dog">
+    
+        <a href="https://www.youtube.com/watch?v=22lBZpuyZxA">Balti CHhanson </a>
+        
+    </header>
+
+    <nav>
+        <a href="#home">Startseite</a>
+        <a href="#about">Über Mich</a>
+        <a href="#work">Arbeiten</a>
+        <a href="#resume">Lebenslauf</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
+
+
+    <section id="home">
+        <h2>Herzlich willkommen auf meinem Portfolio</h2>
+        <p>Ich freue mich, Sie hier begrüßen zu dürfen. Mein Name ist Dr.-Ing. Mouhiba MEZGHANI, und ich bin ein erfahrener Ingenieur mit Schwerpunkt auf Automatisierungstechnik. Neben meiner akademischen Laufbahn bin ich leidenschaftlich daran interessiert, die Welt der neuen Technologien zu erkunden.</p>
+        <p>Insbesondere faszinieren mich Themen wie das Internet der Dinge (IoT), Webentwicklung und Data Science. In meiner Freizeit tauche ich gerne in die Welt der Innovationen ein und setze meine Kenntnisse in diesen aufregenden Bereichen ein.</p>
+        <p>Mein beruflicher Werdegang umfasst erfolgreiche Projekte im Bereich der numerischen Steuerung. Auf dieser Seite können Sie mehr über meine Projekte, Erfahrungen und meine Reise durch die Welt der Technologie erfahren.</p>
+        <p>Vielen Dank für Ihren Besuch, und viel Spaß beim Erkunden!</p>
+    </section>
+    
+   <!--- <section id="home">
+        <h2>Willkommen auf meinem Portfolio</h2>
+        <p>Hier erfahren Sie, wer ich bin und was ich mache.</p>
+    </section>-->
+
+    <!--<section id="about">
+        <h2>Über Mich</h2>
+        <p>Ich bin leidenschaftlich für [fügen Sie Ihre Leidenschaft ein]. Mein beruflicher Werdegang wurde geprägt von [fügen Sie eine bedeutende Erfahrung ein].</p>
+    </section> -->
+
+
+    <section id="about">
+        <h2>Über mich</h2>
+        <p>Herzlich willkommen auf meiner Seite! Ich bin Mouhiba MEZGHANI, Dr.-Ing. in Automatisierungstechnik. Meine Begeisterung erstreckt sich nicht nur über meine akademische Laufbahn, sondern auch über meine Interessen, wie zum Beispiel IoT, Webentwicklung und Data Science.</p>
+        <p>Meine Reise im Bereich der Automatisierungstechnik hat mich zu herausfordernden Projekten geführt, bei denen ich eine bedeutsame Erfahrung, z. B. innovative Lösungen für die Industrie (SANOFI& IPSIS) entwickelt habe. Diese Erfahrungen haben meinen Blick für innovative Technologien geschärft und mich zu einem engagierten Forscher und Praktiker gemacht.</p>
+        <p>Auf meiner Seite teile ich nicht nur meine beruflichen Erfolge, sondern auch meine Begeisterung für Technologie und Innovation. Ich glaube daran, dass die Verbindung von Technik und Kreativität die Welt vorantreibt, und ich freue mich darauf, mit Ihnen meine Projekte und Entdeckungen zu teilen.</p>
+        <p>Vielen Dank, dass Sie sich die Zeit genommen haben, mehr über mich zu erfahren. Falls Sie Fragen haben oder mehr über meine Arbeit erfahren möchten, stehe ich Ihnen gerne zur Verfügung.</p>
+    </section>
+
+    <section id="work">
+        <h2>Arbeiten</h2>
+        <div>
+            <img src="projekt1.jpg" alt="Projekt 1">
+            <p>Beschreibung des Projekts 1.</p>
+        </div>
+        <div>
+            <img src="projekt2.jpg" alt="Projekt 2">
+            <p>Beschreibung des Projekts 2.</p>
+        </div>
+    </section>
+
+
+
+ 
+    <section id="resume">
+        <h2>Lebenslauf</h2>
+    <!-- <div  class="DiplomeAusbildungen">    // -->
+         <!-- <h3 classe="title"> Diplome und Ausbildungen </h3> -->
+        <h3>Ausbildung:</h3>
+        <ul> 
+            <li>  
+                <span class="Text"> 1995 - 1999 : INPT-ENSIGCT, Toulouse, Frankreich </span><br>
+                <span class="Diplome"> Promotion in Verfahrenstechnik </span>
+            </li>
+            <li>
+                <span class="Text"> 1993 - 1995 : INPG-ENSIEG, Grenoble, Frankreich</span><br>
+                <span class="Diplome"> Master in Automatisierung und Produktionstechnik </span>
+            </li>
+            <li>
+                <span class="Text"> 1992 - 1993 : ENSET, Tunis, Tunesien</span><br>
+                <span class="Diplome"> Eignung für fortgeschrittene Studien in der Automatisierungstechnik </span>
+            </li>
+            <li>
+                <span class="Text"> 1988 - 1992 : ENSET, Tunis, Tunesien  </span><br>
+                <span class="Diplome"> Masterabschluss in Elektrotechnik </span>
+            </li>
+        </ul>
+    <!-- </div>  -->
+    <!-- ***********************************************-->
+        <!--<h3 classe="title"> Berufserfahrung </h3> -->
+        <h3>Berufserfahrung:</h3>
+        <!-- // -->
+        <!-- ***********************************************-->
+        <!--<h4 classe="soustitle"> <a href="\Liste der betreuten Projekte.pdf" target="_blank">Liste der betreuten Projekte</a>  </h4> -->
+        
+        <h4> Dozentin </h4>
+        <ul>  
+            <li> 
+                2003 bis jetzt : ENSIT (Nationale Hochschule für Ingenieure von Tunis)
+                Tunis, Tunesien <br>
+                Training Analog und digitale Steuerung (Magnetlevitation, elektrische und hydraulische
+                Systeme)
+            </li>  
+            <li> 
+            Echtzeitsteuerung, Elektrotechnik
+            </li>
+            <li> 
+                Training Logiksysteme, Programmierung in C, C++,
+                LabVIEW, Step 7, Matlab, Simulink
+            </li>
+        </ul>
+        <h4> Entwicklungsingenieur </h4>
+        <ul>
+            <li>
+            1999 - 2003 : IPSIS Paris, Frankreich <br>
+            Entwicklung und Ausarbeitung von Strategien zur Steuerung eines stufenlosen Getriebes
+            </li>
+       </ul>
+        <h4> Lehrforscher</h4>
+        <ul>
+            <li>
+                2000 - 2001 : UTC, Technische Universität von Compiègne, Compiègne, Frankreich
+            </li>
+            <li>
+                1999 - 2000 : Universität Paris-Süd, Paris, Frankreich
+            </li>
+            <li> 1995 - 1999 : INPT-ENSIGCT </li>
+        </ul>
+
+    </section>
+
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <form action="#" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br>
+
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email" required><br>
+
+            <label for="message">Nachricht:</label>
+            <textarea id="message" name="message" rows="4" required></textarea><br>
+
+            <input type="submit" value="Senden">
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Mein Portfolio. Alle Rechte vorbehalten.</p>
+    </footer>
+</body>
+</html>
